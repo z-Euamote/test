@@ -113,7 +113,6 @@ export default {
       }
     },
     delDisabled() {
-      console.log(this.selectedRowKeys.filter(item => item == 0));
       return this.selectedRowKeys && !this.selectedRowKeys.filter(item => item !== 0).length
     }
   },

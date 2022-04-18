@@ -1,7 +1,7 @@
 <!--
  * @Author: yuan
  * @Date: 2022-03-31 18:54:36
- * @FilePath: \test\src\components\addModal.vue
+ * @FilePath: \test\src\page\addModal.vue
  * @Description: 新增弹窗
 -->
 <template>
@@ -89,13 +89,11 @@ export default {
       // 编辑
       this.title = "编辑"
       this.form = _.cloneDeep(this.record)
-      console.log('form', this.form);
     }
   },
   methods: {
     // 点击确定
     async handleOk() {
-      console.log('form', this.form);
       const check_res = await this.$refs['my-form'].validateFields()
       if(check_res) {
         const res = await this.axios.post('http://localhost:8002/billApi/addOrEditBill', this.form)
@@ -109,7 +107,6 @@ export default {
     },
     // 校验金额
     checkPrice(rule, value) {
-      console.log('value', value);
       if(value == null || value == undefined ) {
         return Promise.reject('请输入金额')
       } else {
@@ -129,7 +126,7 @@ export default {
 }
 </script>
 
-<style lang='scss' scoped>
+<style lang='less' scoped>
 
  
 </style>
