@@ -40,7 +40,7 @@
 
 import { Table, Button, Tooltip } from 'ant-design-vue'
 import AddModal from './addModal.vue'
-import dayjs from 'dayjs'
+import moment from 'moment'
 import _ from 'lodash'
 import {
   EditOutlined,
@@ -76,7 +76,7 @@ export default {
           title: '账单日期',
           dataIndex: 'billDate',
           key: 'billDate',
-          customRender: ({text}) => text ? dayjs(text).format('YYYY-MM-DD') : null
+          customRender: ({text}) => text ? moment(text).format('YYYY-MM-DD') : null
         },
         {
           title: '备注',
