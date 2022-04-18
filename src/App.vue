@@ -1,15 +1,23 @@
+<!--
+ * @Author: yuan
+ * @Date: 2021-08-17 17:49:13
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-04-15 16:49:52
+ * @FilePath: \test\src\App.vue
+ * @Description: 
+ * 
+-->
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <test/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import test from './page/test.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    test,
   }
 }
 </script>
